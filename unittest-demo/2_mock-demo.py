@@ -1,9 +1,11 @@
-# 1、Mock的使用
-# 2、spec参数（True，没有的参数将不在mock，而是报错）
-# 3、MagicMock与Mock的区别
-# 4、side_effect 与 return_value 一起使用
-# 了解用法，场景可能不一定合适
-# mock为了模拟外部服务，未实现的功能
+"""
+1、Mock的使用
+2、spec参数（True，没有的参数将不在mock，而是报错）
+3、MagicMock与Mock的区别
+4、side_effect 与 return_value 一起使用
+了解用法，场景可能不一定合适
+mock为了模拟外部服务，未实现的功能
+"""
 
 import unittest
 from unittest.mock import Mock, MagicMock

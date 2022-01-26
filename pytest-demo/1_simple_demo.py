@@ -1,3 +1,8 @@
+"""
+1、pytest fixture 固件的使用
+2、可以类似unittest写类测试，也可写函数测试
+3、兼容unittest"""
+
 import pytest
 
 

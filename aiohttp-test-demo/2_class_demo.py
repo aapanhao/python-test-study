@@ -1,3 +1,10 @@
+"""
+1、继承AioHTTPTestCase类，重写get_application()方法，获取app
+2、setUpAsync、setUp执行测试用例前执行，tearDownAsync、tearDown执行测试用例结束后执行
+3、AioHTTPTestCase类的setUp，会创建server、client、loop
+4、unittest_run_loop装饰测试用例
+"""
+
 from aiohttp.test_utils import AioHTTPTestCase, unittest_run_loop
 from aiohttp import web
 

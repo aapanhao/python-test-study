@@ -1,5 +1,9 @@
-# 1、mock中patch的使用
-
+"""
+1、mock中patch的使用
+2、使用装饰器方式
+3、使用with方式
+4、使用autospec的好处
+"""
 
 import unittest
 from unittest.mock import Mock, patch
@@ -31,6 +35,7 @@ class TestStringMethods(unittest.TestCase):
             mock_request.assert_called_once()
             print()
             print(mock_request)
+            # 可以看到mock_request.call_args_list[0].args[0] 是字符串对象
             print(mock_request.call_args_list[0].args[0], type(mock_request.call_args_list[0].args[0]))
 
     # 使用autospec的好处
@@ -42,5 +47,6 @@ class TestStringMethods(unittest.TestCase):
             mock_request.assert_called_once()
             print()
             print(mock_request)
+            # 可以看到mock_request.call_args_list[0].args[0] 是request对象，所以在assert可以判断使用参数
             print(mock_request.call_args_list[0].args[0], type(mock_request.call_args_list[0].args[0]))
             assert mock_request.call_args_list[0].args[0].name == "spec-name"

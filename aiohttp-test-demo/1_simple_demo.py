@@ -1,5 +1,7 @@
-# pytest-aiohttp aiohttp/test-utils
-# 提供测试服务器，请求服务器客户端
+"""
+1、web测试框架，提供测试服务器，请求服务器客户端
+2、aiohttp_client loop 固件
+"""
 
 import pytest_aiohttp
 from aiohttp import pytest_plugin
@@ -24,6 +26,7 @@ async def test_hello(aiohttp_client, loop):
     assert 'Hello, world' in text
 
 
+# 自定义fixture固件，封装客户端对象
 @pytest.fixture
 def cli(aiohttp_client, loop):
     app = web.Application()
