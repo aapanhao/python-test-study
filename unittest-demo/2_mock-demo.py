@@ -60,7 +60,7 @@ class TestStringMethods(unittest.TestCase):
     def test_func_3(self):
         mock2 = Mock()
         print(mock2.__str__())
-        mock2.__str__ = Mock(return_value="222")
+        mock2.__str__.return_value = "111"
         print(mock2)
 
     # 4、return_value 和 side_effect 一起使用的情况

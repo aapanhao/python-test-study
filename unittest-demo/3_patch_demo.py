@@ -17,15 +17,20 @@ class Request:
     def request_url(self, url):
         pass
 
+    def request_url_new(self, url):
+        pass
 
 class TestStringMethods(unittest.TestCase):
 
     @patch.object(Request, 'request_url', return_value=200)
-    def test_func(self, mock_request):
+    @patch.object(Request, 'request_url_new', return_value=200)
+    def test_func(self, asd, dfg):
         request = Request("spec-name")
         result = request.request_url("www.baidu.com")
         assert result == 200
-        mock_request.assert_called_once()
+        print(asd)
+        print(dfg)
+        dfg.assert_called_once()
 
     def test_func_2(self):
         with patch.object(Request, 'request_url', side_effect=Mock(return_value=200)) as mock_request:

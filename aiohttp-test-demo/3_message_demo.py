@@ -46,6 +46,6 @@ class TestCase(AioHTTPTestCase):
             assert "OK" in result
 
 
-# coverage run --source=./message -m pytest --disable-pytest-warnings tests
+# coverage run --source=. -m pytest 3_message_demo --disable-pytest-warnings
 # coverage report
 # coverage html -d covhtml
